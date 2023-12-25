@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "772428799515",
+    "project_id": "booking-app-bfe3d",
+    "storage_bucket": "booking-app-bfe3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772428799515:android:f1093bdfa8a086ad4622be",
+        "android_client_info": {
+          "package_name": "com.booking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772428799515-dabu3ehc2qko1leg3k09rbieg94eon0k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.booking",
+            "certificate_hash": "78e73ddffe852550697ae06ad29493d47dbeab1c"
+          }
+        },
+        {
+          "client_id": "772428799515-9ajm6ijfjueq7tbgqjk1ou86f9dk1quk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0y8Hmn5SO8jJqAJb-PcU9EabtSNGEmJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772428799515-9ajm6ijfjueq7tbgqjk1ou86f9dk1quk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

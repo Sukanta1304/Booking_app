@@ -1,4 +1,4 @@
-package com.rnboilerplate
+package com.booking
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
