@@ -5,6 +5,7 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import moment from 'moment';
 import {text} from '../constants/globalStyles';
 import SingleDateModal from './SingleDateModal';
+import { colors } from '../constants/colors';
 
 const OneWay = ({
   setOpenAirportModal,
@@ -33,7 +34,7 @@ const OneWay = ({
 
   return (
     <View>
-      <View style={{flexDirection: 'row', marginVertical: 15}}>
+      <View style={{flexDirection: 'row', marginVertical: 15,justifyContent:'center',alignItems:'center'}}>
         <View style={{flex: 0.2}}>
           <Icon library={'Entypo'} name={'aircraft-take-off'} />
           <Icon library={'Entypo'} name={'flow-line'} />
@@ -45,11 +46,11 @@ const OneWay = ({
             onPress={() =>
               setOpenAirportModal({state: true, type: 'boarding'})
             }>
-            <Text style={[text, {paddingVertical: 5}]}>Where from?</Text>
+            <Text style={[text, {paddingBottom: 15,color:colors.placeholderColor}]}>Where from?</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => setOpenAirportModal({state: true, type: 'takeoff'})}>
-            <Text style={[text, {paddingVertical: 5}]}>Where to?</Text>
+            <Text style={[text, {paddingTop: 15,color:colors.placeholderColor}]}>Where to?</Text>
           </TouchableOpacity>
         </View>
         <View
@@ -65,20 +66,20 @@ const OneWay = ({
         style={styles.formElement}
         onPress={() => setSingleDateModal({...singleDateModal, state: true})}>
         <Icon library={'FontAwesome'} name={'calendar-o'} />
-        <Text>{moment(singleDateModal.date).format('ddd MMM D')}</Text>
+        <Text style={[text,{color:colors.placeholderColor}]}>{moment(singleDateModal.date).format('ddd MMM D')}</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.formElement}
         onPress={() => setPassengerMoal(true)}>
         <Icon library={'AntDesign'} name={'user'} />
         {passengerDetails.adults ? (
-          <Text>{passengerDetails.adults} Adults ,</Text>
+          <Text style={[text,{color:colors.placeholderColor}]}>{passengerDetails.adults} Adult(s) ,</Text>
         ) : null}
         {passengerDetails.children.length ? (
-          <Text>{passengerDetails.children.length} Children(s) -</Text>
+          <Text style={[text,{color:colors.placeholderColor}]}>{passengerDetails.children.length} Children(s) -</Text>
         ) : null}
         {passengerDetails.cabinClass ? (
-          <Text>{passengerDetails.cabinClass}</Text>
+          <Text style={[text,{color:colors.placeholderColor}]}>{passengerDetails.cabinClass}</Text>
         ) : null}
       </TouchableOpacity>
       <SingleDateModal

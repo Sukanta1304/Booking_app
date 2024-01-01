@@ -14,6 +14,8 @@ import DestinationModal from './DestinationModal';
 import Icon from './Icon';
 import moment from 'moment';
 import SingleDateModal from './SingleDateModal';
+import { colors } from '../constants/colors';
+import { Button } from '@rneui/base';
 
 const {height, width} = Dimensions.get('window');
 
@@ -68,10 +70,10 @@ const Cars = () => {
       </View>
       {returnLoc ?<TouchableOpacity style={styles.pickupContainer} onPress={()=>setOpenPickModal(true)}>
         <Icon library={'AntDesign'} name={'car'} />
-        <Text style={text}>Pick up location</Text>
+        <Text style={[text,{color:colors.placeholderColor}]}>Pick up location</Text>
       </TouchableOpacity>:
       <View style={{flexDirection: 'row', marginVertical: 15}}>
-      <View style={{flex: 0.2}}>
+      <View style={{flex: 0.2,justifyContent:'center'}}>
         <Icon library={'AntDesign'} name={'car'} />
         <Icon library={'Entypo'} name={'flow-line'} />
         <Icon library={'AntDesign'} name={'car'} />
@@ -82,11 +84,11 @@ const Cars = () => {
           onPress={() =>
             setOpenPickModal(true)
           }>
-          <Text style={[text, {paddingVertical: 5}]}>Pick-up loaction</Text>
+          <Text style={[text, {paddingBottom: 15,color:colors.placeholderColor}]}>Pick-up loaction</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => setOpenDropModal(true)}>
-          <Text style={[text, {paddingVertical: 5}]}>Drop-off location</Text>
+          <Text style={[text, {paddingTop: 15,color:colors.placeholderColor}]}>Drop-off location</Text>
         </TouchableOpacity>
       </View>
       {/* <View
@@ -101,12 +103,13 @@ const Cars = () => {
       }
       <TouchableOpacity style={styles.pickupContainer} onPress={()=>setOpenDate({state:true,type:'date1'})}>
         <Icon library={'AntDesign'} name={'calendar'} />
-        <Text style={text}>{moment(dates.date1).format('ddd MMM D')}</Text>
+        <Text style={[text,{color:colors.placeholderColor}]}>{moment(dates.date1).format('ddd MMM D')}</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.pickupContainer} onPress={()=>setOpenDate({state:true,type:'date2'})}>
         <Icon library={'AntDesign'} name={'calendar'} />
-        <Text style={text}>{moment(dates.date2).format('ddd MMM D')}</Text>
+        <Text style={[text,{color:colors.placeholderColor}]}>{moment(dates.date2).format('ddd MMM D')}</Text>
       </TouchableOpacity>
+      <Button title={'Search'}/>
       <DestinationModal
         visible={openPickModal}
         setVisible={setOpenPickModal}

@@ -1,4 +1,4 @@
-package com.booking
+package com.bookingclone
 
 import android.app.Application
 import com.facebook.react.PackageList

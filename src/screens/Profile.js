@@ -176,7 +176,7 @@ const Profile = ({route, navigation}) => {
             listItem.items.map((item,i)=>
             <TouchableOpacity key={i} onPress={item.onpress} style={styles.listItem}>
               {item.icon}
-              <Text>{item.title}</Text>
+              <Text style={text}>{item.title}</Text>
             </TouchableOpacity>
             )
           }

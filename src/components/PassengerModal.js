@@ -72,19 +72,19 @@ import {
       }
     };
   
-    useEffect(() => {
-      const backAction = () => {
-        setVisible(false);
-        return true;
-      };
+    // useEffect(() => {
+    //   const backAction = () => {
+    //     setVisible(false);
+    //     return true;
+    //   };
   
-      const backHandler = BackHandler.addEventListener(
-        'hardwareBackPress',
-        backAction,
-      );
+    //   const backHandler = BackHandler.addEventListener(
+    //     'hardwareBackPress',
+    //     backAction,
+    //   );
   
-      return () => backHandler.remove();
-    }, []);
+    //   return () => backHandler.remove();
+    // }, []);
   
     const handleConfirm = () => {
         

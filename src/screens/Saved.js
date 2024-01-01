@@ -1,10 +1,18 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
+import { text } from '../constants/globalStyles';
 
 const Saved = () => {
+
+  const [saved,setSaved]= useState([]);
+
   return (
-    <View>
-      <Text>Saved</Text>
+    <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+       {
+        saved.length?
+        <Text style={text}>Your saved items</Text>:
+        <Text style={text}>No saved to show</Text>
+       }
     </View>
   )
 }

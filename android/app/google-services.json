@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:772428799515:android:f1093bdfa8a086ad4622be",
         "android_client_info": {
-          "package_name": "com.booking"
+          "package_name": "com.bookingclone"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "772428799515-dabu3ehc2qko1leg3k09rbieg94eon0k.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.booking",
+            "package_name": "com.bookingclone",
             "certificate_hash": "78e73ddffe852550697ae06ad29493d47dbeab1c"
           }
         },

@@ -5,6 +5,7 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import moment from 'moment';
 import {text} from '../constants/globalStyles';
 import SingleDateModal from './SingleDateModal';
+import { colors } from '../constants/colors';
 
 const MultiCity = ({
   setOpenAirportModal,
@@ -63,7 +64,7 @@ const MultiCity = ({
   return (
     <View>
       <View style={{flexDirection: 'row', marginVertical: 15}}>
-        <View style={{flex: 0.2}}>
+        <View style={{flex: 0.2,justifyContent:'center'}}>
           <Icon library={'Entypo'} name={'aircraft-take-off'} />
           <Icon library={'Entypo'} name={'flow-line'} />
           <Icon library={'Entypo'} name={'aircraft-landing'} />
@@ -74,11 +75,11 @@ const MultiCity = ({
             onPress={() =>
               setOpenAirportModal({state: true, type: 'boarding'})
             }>
-            <Text style={[text, {paddingVertical: 5}]}>Where from?</Text>
+            <Text style={[text, {paddingBottom: 15,color:colors.placeholderColor}]}>Where from?</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => setOpenAirportModal({state: true, type: 'takeoff'})}>
-            <Text style={[text, {paddingVertical: 5}]}>Where to?</Text>
+            <Text style={[text, {paddingTop: 15,color:colors.placeholderColor}]}>Where to?</Text>
           </TouchableOpacity>
         </View>
         {/* <View
@@ -94,10 +95,10 @@ const MultiCity = ({
         style={styles.formElement}
         onPress={() => setOpenDateModal({state:true,type:'date1'})}>
         <Icon library={'FontAwesome'} name={'calendar-o'} />
-        <Text>{moment(multiCityDetails.date1).format('ddd MMM D')}</Text>
+        <Text style={[text,{color:colors.placeholderColor}]}>{moment(multiCityDetails.date1).format('ddd MMM D')}</Text>
       </TouchableOpacity>
       <View style={{flexDirection: 'row', marginVertical: 5}}>
-        <View style={{flex: 0.2}}>
+        <View style={{flex: 0.2, justifyContent:'center'}}>
           <Icon library={'Entypo'} name={'aircraft-take-off'} />
           <Icon library={'Entypo'} name={'flow-line'} />
           <Icon library={'Entypo'} name={'aircraft-landing'} />
@@ -108,11 +109,11 @@ const MultiCity = ({
             onPress={() =>
               setOpenAirportModal({state: true, type: 'boarding'})
             }>
-            <Text style={[text, {paddingVertical: 5}]}>Where from?</Text>
+            <Text style={[text, {paddingBottom: 15,color:colors.placeholderColor}]}>Where from?</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => setOpenAirportModal({state: true, type: 'takeoff'})}>
-            <Text style={[text, {paddingVertical: 5}]}>Where to?</Text>
+            <Text style={[text, {paddingTop: 15,color:colors.placeholderColor}]}>Where to?</Text>
           </TouchableOpacity>
         </View>
         {/* <View
@@ -128,20 +129,20 @@ const MultiCity = ({
         style={styles.formElement}
         onPress={() => setOpenDateModal({state:true,type:'date2'})}>
         <Icon library={'FontAwesome'} name={'calendar-o'} />
-        <Text>{multiCityDetails.date2? moment(multiCityDetails.date2).format('ddd MMM D'):'When'}</Text>
+        <Text style={[text,{color:colors.placeholderColor}]}>{multiCityDetails.date2? moment(multiCityDetails.date2).format('ddd MMM D'):'When'}</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.formElement}
         onPress={() => setPassengerMoal(true)}>
         <Icon library={'AntDesign'} name={'user'} />
         {passengerDetails.adults ? (
-          <Text>{passengerDetails.adults} Adults ,</Text>
+          <Text style={[text,{color:colors.placeholderColor}]}>{passengerDetails.adults} Adult(s) ,</Text>
         ) : null}
         {passengerDetails.children.length ? (
-          <Text>{passengerDetails.children.length} Children(s) -</Text>
+          <Text style={[text,{color:colors.placeholderColor}]}>{passengerDetails.children.length} Children(s) -</Text>
         ) : null}
         {passengerDetails.cabinClass ? (
-          <Text>{passengerDetails.cabinClass}</Text>
+          <Text style={[text,{color:colors.placeholderColor}]}>{passengerDetails.cabinClass}</Text>
         ) : null}
       </TouchableOpacity>
       <SingleDateModal

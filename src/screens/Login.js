@@ -68,6 +68,7 @@ const Login = ({route, navigation}) => {
     try {
       await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
       const {user} = await GoogleSignin.signIn();
+      console.log(user,'g-user')
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         Alert.alert('Cancelled','Sign in cancelled')

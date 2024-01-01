@@ -1,4 +1,5 @@
 
 export const colors={
-    primary:'purple'
+    primary:'purple',
+    placeholderColor:'#807c7c',
 }

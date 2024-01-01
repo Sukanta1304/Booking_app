@@ -68,19 +68,19 @@ const RoomsModal = ({
     }
   };
 
-  useEffect(() => {
-    const backAction = () => {
-      setRoomVisible(false);
-      return true;
-    };
+  // useEffect(() => {
+  //   const backAction = () => {
+  //     setRoomVisible(false);
+  //     return true;
+  //   };
 
-    const backHandler = BackHandler.addEventListener(
-      'hardwareBackPress',
-      backAction,
-    );
+  //   const backHandler = BackHandler.addEventListener(
+  //     'hardwareBackPress',
+  //     backAction,
+  //   );
 
-    return () => backHandler.remove();
-  }, []);
+  //   return () => backHandler.remove();
+  // }, []);
 
   const handleConfirm = () => {
     const chilrenMessage = checkIndetails?.children

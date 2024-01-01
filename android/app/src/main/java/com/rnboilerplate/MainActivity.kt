@@ -1,4 +1,4 @@
-package com.booking
+package com.bookingclone
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
